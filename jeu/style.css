@@ -1,0 +1,169 @@
+/* canva*/
+canvas {
+  height: 75vh; /* 75%  */
+  width: 75vw; /* 75%  */
+  background-image:url('images/space.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: white;
+  border-style: solid;
+  border-width: 3px;
+  display: none;
+  position: absolute;
+  margin-top: 5vh; /* 5%  */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------------------------------------------------------*/
+/* chrono */
+#chronoContainer {
+  color: white;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#chrono {
+  margin: 0;
+  display: none;
+}
+/* ---------------------------------------------------------*/
+
+#vies_container {
+  display:none;
+  position: absolute;
+  top: 17.3%;
+  right: 12.4%;
+  color: #fff;
+  font-size: 24px;
+  z-index: 39;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.25%;
+  border-bottom-left-radius: 900px;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#vie{
+  display: none;
+}
+#vies_Count{
+  display: none;
+}
+/* ---------------------------------------------------------*/
+/* Background */
+
+body {
+  background-color: black;
+}
+/* ---------------------------------------------------------*/
+/* Typographie */
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 3vw;
+  text-align: center;
+  color: white;
+  font-size:70px;
+}
+h2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 3vw;
+  text-align: center;
+  margin-bottom: -10px;
+  color: white;
+}
+p {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+/* ---------------------------------------------------------*/
+/* Containers */
+.container {
+  
+  margin: 0 10px;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+#chronoContainer {
+  display:none;
+  margin-top: 2.8vh; /* 5%  */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 400px;
+  border-top-left-radius: 900px;
+  border-top-right-radius: 900px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+}
+
+
+/* ---------------------------------------------------------*/
+/* Buttons */
+#startButton {
+  
+  font-family: Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#endButton {
+  
+  font-family: Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#detectionButton{
+	border-radius: 7%;
+	background-color: rgba(0, 0, 0, 0.9);
+	color: #FFFFFF;
+	font-size: 50px;
+	padding: 12px 24px;
+	border: none;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	width: 1000px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

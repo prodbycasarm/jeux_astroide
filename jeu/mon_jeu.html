@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--First version of the game Galactis-->
+<!--Added-->
+  Galactis - Un jeu de survie dans l'espace
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Galactis</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div>
+      <h1>Galactis</h1>
+      <p>Utilisez les touches (W, S, A, D) pour vous déplacer.</p>
+    </div>
+    <div id="vies_container">
+      <span id="vie">vies:</span>
+      <span id="vies_Count">3</span>
+    </div>
+    <div id="dessin">
+      <canvas width="1920" height="1277" id="scene"></canvas>
+    </div>
+
+    <div id="buttonContainer">
+      <div class="container">
+        <div class="button-container">
+          <button id="startButton" onclick="openCanvas()">Commencer</button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="button-container">
+         <button id="endButton" onclick="window.location.href='https://javascript.casarm.com/';">Sortir du jeu</button>
+		</div>
+      </div>
+    </div>
+
+    <button id="detectionButton" style="display:none;">Fin du jeu !<br>Appuyez pour recommencez</button>
+
+    <div id="chronoContainer">
+      <p id="chrono">Votre score 0</p>
+    </div>
+
+    <script src="script.js" async></script>
+  </body>
+</html>
