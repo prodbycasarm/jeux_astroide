@@ -161,7 +161,7 @@ let chronoRunning = true;
 let chronoInterval = setInterval(updatechrono, 1000);
 function updatechrono() {
   time++; 
-  chronoElement.textContent = `Votre score: ${time}`; 
+  chronoElement.textContent = `Your score: ${time}`; 
 }
 
 
