@@ -141,10 +141,7 @@ function openCanvas() {
   scene.style.display = "block";
   chrono.style.display = "block";
   chronoContainer.style.display = "block";
-  
-  vie.style.display = "block";  
-  vies_Count.style.display = "block";
-  vies_container.style.display = "block";
+
   document.getElementById('startButton').disabled = false;
 }
 
@@ -321,12 +318,12 @@ function detectCollision(rectangle, triangle, viesElement){
     (rect1.y + rect1.h) > rectTri.y) {
     console.log("collision 1");
     vies--;
-    vies_Count.textContent = vies;
+    
    if (vies===1){
 	window.cancelAnimationFrame(animFrameLoop)
 	document.getElementById('detectionButton').style.display = 'block';
     clearInterval(chronoInterval);
-	vies_Count.textContent = 0;
+	
    }
   } else if (rect4.x < (rectTri.x + rectTri.w) &&
     (rect4.x + rect4.w) > rectTri.x &&
@@ -334,12 +331,12 @@ function detectCollision(rectangle, triangle, viesElement){
     (rect4.y + rect4.h) > rectTri.y) {
     console.log("collision 4");
     vies--;
-    vies_Count.textContent = vies;
+    
 	if (vies===1){
 	   window.cancelAnimationFrame(animFrameLoop)
 	document.getElementById('detectionButton').style.display = 'block';
     clearInterval(chronoInterval);
-	vies_Count.textContent = 0;
+	
    }
   } else if ( rect5.x < (rectTri.x + rectTri.w) &&
     (rect5.x + rect5.w) > rectTri.x &&
@@ -347,12 +344,12 @@ function detectCollision(rectangle, triangle, viesElement){
     (rect5.y + rect5.h) > rectTri.y) {
     console.log("collision 5");
     vies--;
-    vies_Count.textContent = vies;
+    
 	if (vies===1){
 	   window.cancelAnimationFrame(animFrameLoop)
 	document.getElementById('detectionButton').style.display = 'block';
     clearInterval(chronoInterval);
-	vies_Count.textContent = 0;
+	
    }
   } else if (rect6.x < (rectTri.x + rectTri.w) &&
     (rect6.x + rect6.w) > rectTri.x &&
@@ -360,12 +357,12 @@ function detectCollision(rectangle, triangle, viesElement){
     (rect6.y + rect6.h) > rectTri.y) {
     console.log("collision 6");
     vies--;
-    vies_Count.textContent = vies;
+    
 	if (vies===1){
 	   window.cancelAnimationFrame(animFrameLoop)
 	document.getElementById('detectionButton').style.display = 'block';
     clearInterval(chronoInterval);
-	vies_Count.textContent = 0;
+	
    }
   } else if (rect7.x < (rectTri.x + rectTri.w) &&
     (rect7.x + rect7.w) > rectTri.x &&
@@ -373,12 +370,12 @@ function detectCollision(rectangle, triangle, viesElement){
     (rect7.y + rect7.h) > rectTri.y) {
     console.log("collision 7");
     vies--;
-    vies_Count.textContent = vies;
+    
 	if (vies===1){
 	  window.cancelAnimationFrame(animFrameLoop)
 	document.getElementById('detectionButton').style.display = 'block';
     clearInterval(chronoInterval);
-	vies_Count.textContent = 0;
+	
    }
   } else if (rect8.x < (rectTri.x + rectTri.w) &&
     (rect8.x + rect8.w) > rectTri.x &&
@@ -386,12 +383,12 @@ function detectCollision(rectangle, triangle, viesElement){
     (rect8.y + rect8.h) > rectTri.y) {
     console.log("collision 8");
     vies--;
-    vies_Count.textContent = vies;
+    
 	if (vies===1){
 	   window.cancelAnimationFrame(animFrameLoop)
 	document.getElementById('detectionButton').style.display = 'block';
     clearInterval(chronoInterval);
-	vies_Count.textContent = 0;
+	
    }
   }else if (rect9.x < (rectTri.x + rectTri.w) &&
     (rect9.x + rect9.w) > rectTri.x &&
@@ -399,12 +396,12 @@ function detectCollision(rectangle, triangle, viesElement){
     (rect9.y + rect9.h) > rectTri.y) {
     console.log("collision 9");
     vies--;
-    vies_Count.textContent = vies;
+    
 	if (vies===1){
 	   window.cancelAnimationFrame(animFrameLoop)
 	document.getElementById('detectionButton').style.display = 'block';
     clearInterval(chronoInterval);
-	vies_Count.textContent = 0;
+	
    }
   } else if (rect10.x < (rectTri.x + rectTri.w) &&
     (rect10.x + rect10.w) > rectTri.x &&
@@ -412,12 +409,12 @@ function detectCollision(rectangle, triangle, viesElement){
     (rect10.y + rect10.h) > rectTri.y) {
     console.log("collision 10");
     vies--;
-    vies_Count.textContent = vies;
+    
 	if (vies===1){
 	  window.cancelAnimationFrame(animFrameLoop)
 	document.getElementById('detectionButton').style.display = 'block';
     clearInterval(chronoInterval);
-	vies_Count.textContent = 0;
+	
    }
   }
 

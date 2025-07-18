@@ -1,45 +1,143 @@
 <!DOCTYPE html>
-<!--First version of the game Galactis-->
-<!--Added-->
-  Galactis - Un jeu de survie dans l'espace
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Galactis</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <div>
-      <h1>Galactis</h1>
-      <p>Utilisez les touches (W, S, A, D) pour vous déplacer.</p>
-    </div>
-    <div id="vies_container">
-      <span id="vie">vies:</span>
-      <span id="vies_Count">3</span>
-    </div>
-    <div id="dessin">
-      <canvas width="1920" height="1277" id="scene"></canvas>
-    </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galactis - Space Survival Game</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
-    <div id="buttonContainer">
-      <div class="container">
-        <div class="button-container">
-          <button id="startButton" onclick="openCanvas()">Commencer</button>
-        </div>
+  body {
+    margin: 0;
+    background: radial-gradient(ellipse at center, #000814 0%, #00142d 100%);
+    font-family: 'Orbitron', sans-serif;
+    color: #3300ff;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  header h1 {
+    font-size: 4rem;
+    margin-top: 2rem;
+    color: #0059ff;
+    text-shadow: 0 0 10px #3300ff, 0 0 20px #3300ff;
+  }
+
+  header p {
+    font-size: 1.25rem;
+    color: #f0caff;
+    text-shadow: 0 0 5px #0059ff;
+  }
+
+  canvas#scene {
+    display: none;
+    margin: 2rem auto;
+    width: 75vw;
+    height: 75vh;
+    background: black url('images/space.jpg') center / cover no-repeat;
+    border: 3px dashed #3300ff;
+    border-radius: 1rem;
+    box-shadow: 0 0 25px #3300ff;
+  }
+
+  #vies_container, #chronoContainer {
+    display: none;
+    background-color: rgba(0, 101, 173, 0.8);
+    border: 2px solid #3300ff;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: absolute;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+
+  #vies_container {
+    top: 5%;
+    right: 5%;
+  }
+
+  #chronoContainer {
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffccff;
+  }
+
+  #buttonContainer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #startButton, #endButton {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border: 2px solid #3300ff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: #3300ff;
+    text-shadow: 0 0 10px #3300ff;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 20px #3300ff inset;
+  }
+
+  #startButton:hover, #endButton:hover {
+    background-color: #3300ff;
+    color: black;
+    transform: scale(1.1);
+  }
+
+  #detectionButton {
+    display: none;
+    font-size: 2rem;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(79, 44, 252, 0.1);
+    color: white;
+    border: 2px solid #3300ff;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1s infinite alternate;
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 10px #3300ff; }
+    100% { box-shadow: 0 0 30px #3300ff; }
+  }
+</style>
+
+<body>
+  <header>
+    <h1>Galactis</h1>
+    <p>Use the <strong>W, A, S, D</strong> keys or your mouse to move.</p>
+  </header>
+
+  <main>
+    <section id="hud">
+      <div id="chronoContainer">
+        <p id="chrono">Your Score: 0</p>
       </div>
-      <div class="container">
-        <div class="button-container">
-         <button id="endButton" onclick="window.location.href='https://javascript.casarm.com/';">Sortir du jeu</button>
-		</div>
-      </div>
-    </div>
+    </section>
 
-    <button id="detectionButton" style="display:none;">Fin du jeu !<br>Appuyez pour recommencez</button>
+    <canvas id="scene" width="1920" height="1277"></canvas>
 
-    <div id="chronoContainer">
-      <p id="chrono">Votre score 0</p>
-    </div>
+    <section id="buttonContainer">
+      <button id="startButton" onclick="openCanvas()">Start</button>
+      <button id="endButton" onclick="window.location.href='https://javascript.casarm.com/';">Exit Game</button>
+    </section>
 
-    <script src="script.js" async></script>
-  </body>
+    <button id="detectionButton">Game Over!<br>Press to restart</button>
+  </main>
+
+  <script src="script.js" async></script>
+</body>
 </html>
